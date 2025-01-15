@@ -112,6 +112,7 @@
             </div>
         </div>
         <!-- Call to action-->
+        
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Sieh dir eine Beispielseite an</h2>
@@ -119,6 +120,25 @@
             </div>
         </section>
         <!-- Contact-->
+        <?php
+    //$my_array = ["name" => "John", "age" => 30, "city" => "New York"];
+    //var_dump( $my_array);
+    //$xname = $my_array["name"];
+    //echo "<h1>".$xname."</h1>";
+    foreach ($_POST as $key => $value) {
+        echo "<h1>".$key.": ".$value."</h1>";
+    }
+
+    $x_email=$_POST["email"];
+    $x_passwort=$_POST["password"];
+
+    if($x_email=="anna@gmail.com" && $passwort=="1234"){
+        echo "<h1>Login Erfolgreich!</h1>";}
+        else {
+            echo "<h1>Login Fehlgeschlagen!</h1>";
+        }
+ ?>
+ 
         <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -130,13 +150,7 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
+                 
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
