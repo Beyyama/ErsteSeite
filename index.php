@@ -142,7 +142,7 @@
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Vor- und Zuname</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Bitte geben Sie ihren Namen.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
@@ -183,6 +183,43 @@
                             <!-- Submit Button-->
                             <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Absenden</button></div>
                         </form>
+
+                        <form action="register.php" method="POST">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="password_confirm">Passwort bestätigen:</label>
+        <input type="password" id="password_confirm" name="password_confirm" required><br><br>
+
+        <input type="submit" value="Registrieren">
+    </form>
+
+
+                        <h2>Login</h2>
+
+<?php
+
+if (isset($error)) {
+    echo "<p style='color:red;'>$error</p>";
+}
+?>
+
+<form method="post" action="">
+    <label for="username">Benutzername:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    
+    <label for="password">Passwort:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <button type="submit">Einloggen</button>
+</form>
+
                     </div>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center">
